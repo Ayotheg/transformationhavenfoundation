@@ -189,7 +189,11 @@ body{
     font-weight: normal;
 }
 
-
+@media (max-width: 768px) {
+    .dropdown-menu {
+        display: flex !important;
+    }
+}
 /*** Navbar ***/
 .fixed-top {
     transition: .5s;
