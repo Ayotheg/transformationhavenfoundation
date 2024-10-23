@@ -81,19 +81,3 @@
     
 })(jQuery);
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    const toggleBtn = document.getElementById("toggle-btn");
-    const dropdownNav = document.getElementById("dropdown-nav");
-
-    toggleBtn.addEventListener("click", function() {
-        dropdownNav.classList.toggle("active");
-    });
-
-    // Close the dropdown when clicking outside
-    window.addEventListener("click", function(e) {
-        if (!dropdownNav.contains(e.target) && !toggleBtn.contains(e.target)) {
-            dropdownNav.classList.remove("active");
-        }
-    });
-});
