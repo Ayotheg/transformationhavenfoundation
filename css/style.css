@@ -589,6 +589,29 @@ body{
     color: var(--primary);
 }
 
+#link {
+    position: relative; /* Ensures the z-index works */
+    z-index: 9999; /* Higher z-index to place it above other elements */
+}
 
+#link a {
+    position: relative; /* Ensures each link stays above surrounding elements */
+    z-index: 10000; /* Keeps each individual link clickable */
+    pointer-events: auto; /* Guarantees the links are clickable */
+}
+
+/* Additional spacing if needed to avoid overlapping */
+#link {
+    padding: 10px;
+}
+
+/* Mobile-specific fix to ensure the icons stay clickable */
+@media (max-width: 768px) {
+    #link {
+        bottom: 0; /* Adjusts position to the bottom of the screen */
+        right: 0;
+        z-index: 9999; /* Keeps it on top of other elements */
+    }
+}
 
 
